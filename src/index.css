@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: #04081f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #04081f;
+  color: #e8f4ff;
+  font-family: 'Rajdhani', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+/* Scroll snap sections */
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #04081f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7a18, #e85d04);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffa726;
+}
+
+/* Utility classes */
+.text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 122, 24, 0.6), 0 0 40px rgba(255, 122, 24, 0.3);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 20px rgba(59, 79, 255, 0.6), 0 0 40px rgba(59, 79, 255, 0.3);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 15px rgba(180, 213, 255, 0.8), 0 0 30px rgba(180, 213, 255, 0.4);
+}
+
+.btn-glow-orange {
+  box-shadow: 0 0 30px rgba(255, 122, 24, 0.5), 0 0 60px rgba(255, 122, 24, 0.2), inset 0 0 20px rgba(255, 167, 38, 0.2);
+}
+
+.btn-glow-orange:hover {
+  box-shadow: 0 0 40px rgba(255, 122, 24, 0.8), 0 0 80px rgba(255, 122, 24, 0.4), inset 0 0 30px rgba(255, 167, 38, 0.3);
+}
+
+.neon-border {
+  border: 1px solid rgba(255, 122, 24, 0.4);
+  box-shadow: 0 0 15px rgba(255, 122, 24, 0.2), inset 0 0 15px rgba(255, 122, 24, 0.05);
+}
+
+.neon-border-blue {
+  border: 1px solid rgba(59, 79, 255, 0.4);
+  box-shadow: 0 0 15px rgba(59, 79, 255, 0.2), inset 0 0 15px rgba(59, 79, 255, 0.05);
+}
+
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(59, 79, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 79, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Sharp angular clip for buttons and cards */
+.clip-sharp {
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+/* Reveal animations for content within pages */
+.reveal-stagger > * {
+  opacity: 0;
+  animation: revealStagger 0.6s ease-out forwards;
+}
+.reveal-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.reveal-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.reveal-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.reveal-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.reveal-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.reveal-stagger > *:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes revealStagger {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+.animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }

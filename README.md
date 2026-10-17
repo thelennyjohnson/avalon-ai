@@ -129,6 +129,8 @@ assets or rely on this project to protect production funds.
 
 ## Documentation
 
+-   [Technical Brief (PDF)](docs/TECHNICAL_BRIEF.pdf) --- project brief
+
 -   [Vision](docs/VISION.md) --- mission, principles, scope, and success
     criteria
 -   [Architecture](docs/ARCHITECTURE.md) --- proposed components, data flow,

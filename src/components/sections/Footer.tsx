@@ -1,4 +1,4 @@
-import { ArrowUpRight, FileText, Github, MessageSquareText, Sword } from 'lucide-react';
+import { ArrowUpRight, FileText, Github, MessageSquareText } from 'lucide-react';
 
 const REPO_URL = 'https://github.com/thelennyjohnson/avalon-ai';
 const BRIEF_URL = `${REPO_URL}/blob/main/docs/TECHNICAL_BRIEF.pdf`;
@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-start">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <Sword className="h-7 w-7 text-avalon-orange rotate-[-135deg]" aria-hidden="true" />
+              <img src="/avalon-logo.svg" alt="" aria-hidden="true" className="h-9 w-8 object-contain" />
               <p className="font-display font-bold text-base tracking-[0.16em] text-avalon-white m-0">
                 AVALON<span className="text-avalon-orange"> AI</span>
               </p>

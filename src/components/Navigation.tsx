@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Sword, Menu, X, Globe, Cpu, ShieldCheck, Boxes, FlaskConical, Users } from 'lucide-react';
+import { Menu, X, Globe, Cpu, ShieldCheck, Boxes, FlaskConical, Users } from 'lucide-react';
 import { playUiClick, playUiHover } from '@/lib/uiSound';
 
 export const SECTIONS = [
@@ -47,7 +47,7 @@ export default function Navigation() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-avalon-dark/70 backdrop-blur-md border-b border-avalon-orange/15">
         <div className="flex items-center justify-between px-4 sm:px-6 py-3">
           <button onClick={() => scrollTo(0)} onMouseEnter={playUiHover} className="flex items-center gap-2 group" aria-label="Avalon AI home">
-            <Sword className="w-5 h-5 text-avalon-orange group-hover:scale-110 transition-transform rotate-[-135deg]" />
+            <img src="/avalon-logo.svg" alt="" aria-hidden="true" className="w-6 h-7 object-contain group-hover:scale-110 transition-transform" />
             <span className="font-display font-bold text-sm sm:text-base tracking-widest text-avalon-white">AVALON<span className="text-avalon-orange"> AI</span></span>
           </button>
           <button className="lg:hidden text-avalon-white p-1" onClick={() => { playUiClick(); setOpen(!open); }} onMouseEnter={playUiHover} aria-label="Toggle menu">

@@ -6,6 +6,7 @@ import TokenSection from '@/components/sections/TokenSection';
 import Products from '@/components/sections/Products';
 import JoinNetwork from '@/components/sections/JoinNetwork';
 import JoinCommunity from '@/components/sections/JoinCommunity';
+import Footer from '@/components/sections/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <JoinNetwork />
         <JoinCommunity />
       </main>
+      <Footer />
     </div>
   );
 }

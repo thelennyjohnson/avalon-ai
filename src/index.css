@@ -19,6 +19,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Keep paragraph and card-description copy readable on the dark surfaces. */
+p.font-body,
+span.font-body {
+  color: #d6e5f5;
+}
+
 #root {
   overflow-x: hidden;
 }
